@@ -228,7 +228,7 @@ The MySQL database was connected directly to **Power BI Desktop** to build a ful
 
 ### Dashboard Preview
 
-![Fraud Detection Power BI Dashboard](report/dashboard_preview.png)
+![Fraud Detection Power BI Dashboard](https://github.com/shubham2003-engineer/Fraud-Detection-Analytics-/blob/main/Screenshot%202026-05-24%20093247.png)
 
 
 
