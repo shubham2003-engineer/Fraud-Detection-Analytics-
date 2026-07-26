@@ -127,11 +127,11 @@ ORDER BY amount DESC;
 
 ```sql
 SELECT
-    nameOrig,
+    nameDest,
     COUNT(*) AS fraud_count
 FROM transactions
 WHERE isFraud = 1
-GROUP BY nameOrig
+GROUP BY nameDest
 ORDER BY fraud_count DESC;
 ```
 
@@ -148,14 +148,14 @@ SELECT
     ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2)  AS percentage
 FROM (
     SELECT
-        nameOrig,
+        nameDest,
         CASE
             WHEN COUNT(*) = 1 THEN 'One-time'
             ELSE 'Repeat'
         END AS fraud_type
     FROM transactions
     WHERE isFraud = 1
-    GROUP BY nameOrig
+    GROUP BY nameDest
 ) t
 GROUP BY fraud_type;
 ```
